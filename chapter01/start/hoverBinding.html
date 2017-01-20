@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <span v-bind:title="message">
+        내 위에 마우스를 올려놓으면 동적으로 바인딩 된 title을 볼 수 있게 됩니다.
+    </span>
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '이 메세지는 ' + new Date() + '에 로드가 되었습니다.'
+        }
+    });
+
+    // 콘솔을 열어서 거기서 app.message = 'Good World';를 입력해보자.
+    // "v-bind:속성"을 통해서 속성값에 데이터를 바인딩 할 수 있다아
+    // <span>태그의 title이 변하게 된 것을 알 수 있다.
+</script>
+
+</body>
+</html>
+

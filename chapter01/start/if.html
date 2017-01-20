@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <span v-if="seen">
+        seen이 true여만 저를 볼수 있어요 true로 바꾸어주세요.
+    </span>
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            seen : true
+        }
+    });
+
+    // 콘솔을 열어서 거기서 app.seen = false;를 입력해보자.
+    // text가 사라지는 것을 확인 할 수 있다.
+    // v-if를 통해서 dom을 제어 할 수 잇따.
+    // 이 예제는  dom구조도 변경할 수 있음을 보여준다. 삽입,갱신,전환효과시 쓸수 있을꺼라 생각이 든다.
+</script>
+
+</body>
+</html>
+

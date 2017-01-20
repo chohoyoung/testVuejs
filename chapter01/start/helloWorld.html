@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    {{ message }}
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello world'
+        }
+    });
+
+    // 콘솔을 열어서 거기서 app.message = 'Good World';를 입력해보자.
+    // {{}}
+    // 바로 화면이 렌더링 되는것을 확인 할 수 있게 된다.
+</script>
+
+</body>
+</html>

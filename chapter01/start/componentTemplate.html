@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <ol>
+        <!-- 각 todo-item 에 todo 객체를 제공합니다. -->
+        <!-- 그것의 컨텐츠는 동적입니다. -->
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
+</div>
+
+<script type="text/javascript">
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            groceryList: [
+                { text: '채소' },
+                { text: '치즈' },
+                { text: '사람이 먹을 수 있는 무엇이든' }
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>
+

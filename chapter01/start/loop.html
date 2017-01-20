@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <li v-for="todo in todos">
+        {{todo.text}}
+    </li>
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            todos : [
+                {text: '1. 아침에 일어나서'},
+                {text: '2. 지각하지 않게 버스타고'},
+                {text: '3. 아 졸려죽겟네'}
+            ]
+        }
+    });
+
+    // 콘솔에서 app.todos.push({text: '4.집에갈시간이다 만세'});를 입력하면 list가 하나 추가 됩니다.
+    // v-for는 반복 반복 반복
+</script>
+
+</body>
+</html>
+
